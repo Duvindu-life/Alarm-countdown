@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techy Alarm and Countdown</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Techy Alarm & Countdown</h1>
+        
+        <div class="card alarm-setup">
+            <h2>Set Alarm</h2>
+            <div class="form-group">
+                <input type="date" id="datePicker" required>
+                <input type="number" id="hours" min="0" max="23" placeholder="HH" required>
+                <input type="number" id="minutes" min="0" max="59" placeholder="MM" required>
+                <input type="number" id="seconds" min="0" max="59" placeholder="SS" required>
+            </div>
+            <button onclick="saveReminder()" class="btn btn-primary">Set Alarm</button>
+        </div>
+
+        <div class="card reminder-list">
+            <h2>Alarms</h2>
+            <div id="reminderList"></div>
+        </div>
+
+        <div class="card countdown">
+            <h2>Countdown</h2>
+            <div id="countdownDisplay">00:00:00</div>
+            <button onclick="startCountdown()" class="btn btn-secondary">Start Countdown</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
